@@ -1,0 +1,59 @@
+// abstracts ===================
+@import "abstracts/mixins";
+@import "abstracts/variaveis";
+
+// abstracts ===================
+@import "base/default";
+@import "base/tipografia";
+
+//blocos ===================
+@import "blocos/topo";
+@import "blocos/topo-mobile";
+@import "blocos/footer";
+@import "blocos/grids";
+@import "blocos/navbar";
+@import "blocos/navbar-mobile";
+@import "blocos/sidebar";
+@import "blocos/produtos";
+@import "blocos/numeros";
+@import "blocos/apresentacao";
+@import "blocos/artigos";
+@import "blocos/representantes";
+@import "blocos/base-pagina";
+@import "blocos/form-contato";
+@import "blocos/form-cadastro";
+@import "blocos/form-orcamento";
+@import "blocos/lista-marcas";
+
+//contato ===================
+@import "paginas/home";
+@import "paginas/institucional";
+@import "paginas/contato";
+
+//componentes ===================
+@import "componentes/botoes";
+@import "componentes/card-artigos";
+@import "componentes/forms";
+@import "componentes/slider";
+@import "componentes/tabela";
+@import "componentes/titular";
+@import "componentes/erros";
+
+
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 100%;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}

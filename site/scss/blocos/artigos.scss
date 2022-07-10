@@ -1,0 +1,75 @@
+.grid-artigos {
+    
+    
+
+    @media #{$monitor} {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-gap: 40px 20px;
+        align-items: stretch;
+    }
+    @media #{$celular} {
+    }
+
+    
+
+
+
+
+}
+
+.box-artigo {
+
+
+    @media #{$monitor} {
+        display: flex;
+        justify-content: space-between;
+
+	}
+	
+    .imagem{
+        @media #{$monitor} {
+            width: 30%;
+        }
+        @media #{$celular} {
+            width: 100%;
+        }
+    }
+    
+    .texto{
+        @media #{$monitor} {
+            width: calc(70% - 25px);
+        }
+        
+        grid-area: texto;
+
+        h4{
+            margin: 0 ;
+        }
+        p{
+            margin: 0;
+        }
+
+        .titulo{
+            grid-area: titulo;
+            height: 50px;
+            
+        }
+
+        .btn{
+            background: $azul;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+            padding: 0.4rem 0.6rem;
+            display: block;
+            width: fit-content;
+            margin: auto;
+        }
+    }
+    
+
+
+
+}
+

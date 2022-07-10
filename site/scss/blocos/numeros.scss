@@ -1,0 +1,30 @@
+#numeros{
+    padding: 3rem 0;
+}
+
+.grid-numeros {
+    display: grid;
+    
+    @media #{$monitor} {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @media #{$celular} {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    grid-gap: 20px;
+    align-items: stretch;
+
+    > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+    }
+
+    p{font-size: 1rem;}
+
+    h3{
+        @media #{$celular} {
+            margin: 0 0 10px;
+        }
+    }
+}
+

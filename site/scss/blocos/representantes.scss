@@ -1,0 +1,51 @@
+.grid-representantes {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 40px 30px;
+    align-items: stretch;
+    margin-bottom: 35px;
+}
+
+.box-representante {
+
+    justify-content: space-between;
+
+    .texto{
+        width: 100%;
+        h3{
+            margin: 0 ;
+        }
+        ul{
+            margin: 0 0 15px 0;
+            li{margin-bottom: 6px;}
+        }
+
+        .titulo{
+            grid-area: titulo;
+            height: 50px;
+            
+        }
+
+        .btn{
+            background: $verde;
+            border-radius: 4px;
+            color: white;
+            padding: 0.4rem 0.6rem;
+            display: block;
+            width: 120px;
+            margin: auto;
+            margin: 0 10px 10px 0;
+
+            &:hover {
+                background-color:$verde-hover;
+            }
+        }
+
+        .footer{
+            flex-wrap: wrap;
+
+        }
+    }
+}
+

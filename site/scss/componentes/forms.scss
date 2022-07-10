@@ -1,0 +1,42 @@
+form {
+
+    label {
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin: .5rem 0 .3rem;
+    }
+
+	[type=text],[type=email],[type=url],[type=password],select,textarea {
+        border-radius: 0;
+        padding: 8px;
+        border: 1px solid $azul;
+        border-radius: 4px;
+        background: white;
+    }
+
+    [type=text]:focus, [type=email]:focus, [type=url]:focus,[type=password]:focus, select:focus, textarea:focus {
+        outline: none;
+        border: 1px solid $verde;
+        background: white;
+    }
+
+    .btn_form {
+        font-weight: bold;
+        color: white;
+        border-radius: 0;
+        border: none;
+        margin-top: 18px;
+        background: $azul;
+        padding: 8px 15px !important;
+        text-transform: uppercase;
+        font-size: 16px;
+        width: fit-content;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: $azul-hover;
+        }
+    }
+
+
+}

@@ -1,0 +1,48 @@
+#base{
+    padding: 2rem 0;
+}
+
+.img-destaque{
+    margin-bottom: 2rem;
+}
+
+.textual{
+    @media #{$monitor} {
+        width: 80%;
+    }
+}
+
+.plano{
+    @media #{$monitor} {
+        display: flex;
+    }
+}
+
+.pagina.plano{
+    justify-content: space-between;
+}
+
+.textual-plano{
+    @media #{$monitor} {
+        width: 65%;
+    }
+    @media #{$celular} {
+        width: 100%;
+    }
+}
+
+.textual-form{
+    
+    @media #{$monitor} {
+        width: calc(35% - 60px);
+    }
+    padding: 20px;
+    background: #f7f7f7;
+    height: fit-content;
+
+    h3{
+        margin: 0 0 10px;
+    }
+}
+
+

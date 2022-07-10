@@ -1,0 +1,33 @@
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Rubik', sans-serif;
+
+
+$cor-01: #04002b;
+$cor-02: #6081cc;
+
+$azul: #155d92;
+$azul-hover: #09446e;
+$verde: #568504;
+$verde-hover: #3d5f03;
+$preto: #222222;
+$cinzabg: #f5f5f5;
+$cinzafonte: #5c5c5c;
+$azulescuro: #2d3053;
+$azulclaro: #f8fbff;
+$branco: #f5f5f5;
+$cinza-bg: whitesmoke;
+
+$tela-monitor: 901px;
+$tela-celular: 900px;
+
+$celular: "only screen and (max-width : 900px)";
+$monitor: "only screen and (min-width : 901px)";
+$notebook: "only screen and (max-width : 1300px)";
+
+/*
+@media #{$celular} {
+    font-size: 36px;
+    margin: 150px 0;
+  }
+
+  */

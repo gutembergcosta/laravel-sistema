@@ -1,0 +1,20 @@
+.area-orcamento {
+
+    overflow: hidden;
+
+    .nome {width: calc(100% - 16px);}
+    .telefone {width: calc(50% - 16px);}
+    .email {width: calc(100% - 16px);}
+    .valor {width: calc(50% - 16px);}
+   
+
+    >div{
+        margin: 0  8px 8px;
+        flex-direction: column;
+        float: left;
+    }
+
+}
+
+  
+  

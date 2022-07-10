@@ -1,0 +1,35 @@
+.area-erros{
+    width: 70%;
+    margin: auto;
+}
+
+.alert-danger{
+
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+
+    .close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.75rem 1.25rem;
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #721c24;
+        text-shadow: 0 1px 0 #fff;
+
+        &:hover{
+            color: #000;
+            text-decoration: none;
+            opacity: .75;
+        }
+    }
+}

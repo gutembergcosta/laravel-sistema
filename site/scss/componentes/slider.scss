@@ -1,0 +1,33 @@
+.owl-area {
+    position: relative;
+    display: flex;
+
+}
+
+.owl-btn {
+    position: absolute;
+    z-index: 30;
+    padding: 1rem;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer
+}
+
+.owl-left {
+    left: 0.5rem;
+}
+
+.owl-right {
+    right: 0.5rem;
+}
+
+.owlBtnPrev,
+.owlBtnNext {
+    top: calc(50% - 80px);
+}
+
+.owlMarcasBtnPrev,
+.owlMarcasBtnNext {
+    top: calc(50% - 40px);
+}

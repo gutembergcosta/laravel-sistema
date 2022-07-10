@@ -1,0 +1,49 @@
+.linha{width: 100%; float: left;}
+.pagina{
+	margin: auto;
+	@media #{$celular} {
+		max-width: 92%;
+	}
+
+	@media #{$monitor} {
+		max-width: 1200px;
+	}
+}
+.m-auto{margin: auto;}
+
+.total{width: 100%}
+.left{float: left;}
+.right{float: right;}
+.text-center{text-align: center}
+.text-right{text-align: right}
+.hide{display: none!important}
+.flex{display: flex}
+.grid{display: grid}
+.block{display: block}
+.bg-contraste{background-color: $cinza-bg;}
+
+
+.altura_minima{height: 600px;}
+.justificar{text-align: justify;}
+
+.link-base{
+  color: white;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+body{
+  margin: 0; 
+  color: $preto;
+}
+
+a:hover,.btn:hover{cursor: pointer;}
+
+ul{list-style: none;}
+ul{margin: 0; padding: 0;}
+ul li{margin: 0; padding: 0;}
+
+

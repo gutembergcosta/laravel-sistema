@@ -1,0 +1,91 @@
+.grid-topo {
+    .logo {
+        grid-area: logo;
+        align-items: center;
+
+        a{
+            max-width: 400px;
+        }
+    }
+    .vazio01 {
+        grid-area: vazio01;
+        align-items: center;
+        img{
+            max-width: 130px;
+        }
+    }
+    .telefone {
+        grid-area: telefone; 
+        ul{
+            flex-flow: row-reverse;
+
+        }
+        li{
+            margin: 0 0 0 0.8rem;
+            font-weight: bold;
+
+            i{
+                color: $azul; 
+                margin-right: 0.4rem;
+            }
+        }
+    }
+    .social-media {
+        grid-area: social_media;
+        margin: 0.8rem 0;
+        li{
+            a{
+                background: $azul; 
+                border-radius: 100%;
+                padding: 5px 7px;
+                display: block;
+                text-align: center;
+                color: white;
+                margin-left: 0.4rem;
+
+                &:hover{
+                    background-color:$azul-hover;
+                }
+            }
+        }
+    }
+    .navbar-area {
+        grid-area: navbar;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .call-cadastro {
+        grid-area: cadastro;
+        flex-flow: row-reverse;
+        align-items: center;
+        margin-top: 1rem;
+
+        a{
+            font-weight: bold;
+            color: white;
+            background: $verde;
+            border-radius: 8px;
+            text-align: center;
+            padding: 0.5rem 0.8rem;
+            margin-left: 0.8rem;
+            font-size: 0.9rem;
+
+            &:hover{
+                background-color:$verde-hover;
+            }
+        }
+    }
+
+    display: grid;
+    grid-template-areas: 
+        'logo logo logo vazio01 telefone telefone' 
+        'logo logo logo vazio01 social_media social_media' 
+        'navbar navbar navbar navbar cadastro cadastro';
+    gap: 0 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+  
+  

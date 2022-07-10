@@ -1,0 +1,84 @@
+.area-titular {
+    text-align: center;
+
+	@media #{$monitor} {
+		margin: 4rem 0;
+	}
+	
+	@media #{$celular} {
+		margin: 2rem 0;
+	}
+
+
+    h2 {
+
+		@media #{$celular} {
+			font-size: 1.6rem;
+		}
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 2px;
+            background: #3498db;
+            display: inline-block;
+
+
+        }
+
+        &::after {
+            content: "";
+            width: 50px;
+            height: 2px;
+            background: #3498db;
+            display: inline-block;
+
+        }
+
+        &::before {
+            margin: 0 15px 10px 0;
+
+            @media #{$celular} {
+                display: none;
+            }
+        }
+
+        &::after {
+            margin: 0 0 10px 15px;
+
+            @media #{$celular} {
+                display: none;
+            }
+        }
+    }
+
+    .texto-central {
+        @media #{$monitor} {
+			width: 70%;
+		}
+        margin: auto;
+    }
+
+}
+
+#titular {
+    background: $azul;
+
+    .titular {
+        text-align: left;
+        padding: 1rem 0;
+
+        h1 {
+            color: $branco;
+			@media #{$celular} {
+				font-size: 1.3rem;
+			}
+        }
+
+        .texto-central {
+            margin: auto;
+			width: 70%;
+        }
+
+    }
+}

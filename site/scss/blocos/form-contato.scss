@@ -1,0 +1,42 @@
+.area-form{
+    
+    margin: auto;
+
+    @media #{$monitor} {
+        width: 40%;
+    }
+}
+
+.grid-area-form {
+
+    @media #{$monitor} {
+        .nome {grid-area: nome;}
+        .email {grid-area: email;}
+        .telefone {grid-area: telefone;}
+        .texto {grid-area: texto;}
+        .footer {grid-area: footer;}
+        display: grid;
+        gap: 0 10px;
+        grid-template-areas: 
+        'nome nome nome nome' 
+        'email email telefone telefone' 
+        'texto texto texto texto' 
+        'footer footer footer footer '; 
+    }
+    
+
+    
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
+
+    
+
+    div{
+        margin: 0  0 8px;
+        flex-direction: column;
+    }
+
+}
+  
+  

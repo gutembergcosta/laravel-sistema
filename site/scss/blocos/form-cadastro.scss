@@ -1,0 +1,41 @@
+.area-cadastro {
+
+    
+    margin: auto;
+    overflow: hidden;
+
+    @media #{$monitor} {
+
+        width: 50%;
+
+        .nome {width: calc(50% - 16px);}
+        .telefone {width: calc(30% - 16px);}
+        .email {width: calc(50% - 16px);}
+        .senha {width: calc(40% - 16px);}
+
+        .endereco {width: calc(50% - 16px);}
+        .numero {width: calc(15% - 16px);}
+        .complemento {width: calc(35% - 16px);}
+
+        .bairro {width: calc(35% - 16px);}
+        .cidade {width: calc(35% - 16px);}
+        .uf {width: calc(30% - 16px);}
+        .footer {width: calc(100% - 16px);}
+        
+    }
+
+    >div{
+        margin: 0  8px 8px;
+        flex-direction: column;
+        float: left;
+        @media #{$celular} {
+            width: calc(100% - 16px);
+        }
+    }
+    
+
+
+}
+
+  
+  

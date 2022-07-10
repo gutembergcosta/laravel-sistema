@@ -22,4 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/artigos', 'ApiVueController@lista');
 Route::get('/artigo/{action}/{id?}', 'ApiVueController@getItem');
 Route::post('/artigo/salvar', 'ApiVueController@salvar');
-Route::get('/files', 'ApiVueController@files');
+//Route::get('/files', 'ApiVueController@files');
+//Route::post('/upload', 'ApiVueController@uploadApi');
+Route::post('/upload', 'ArquivoController@uploadApi');
+Route::post('/uploadDropZone', 'ArquivoController@uploadDropZone');
+

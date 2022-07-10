@@ -14,6 +14,7 @@ class ArquivoController extends Controller
 
     public function upload(Request $request){
 
+
         $validator = Validator::make($request->all(), [
             'myfile' => 'required|mimes:jpg,jpeg,png,pdf,xls,xlsx|max:5000',
         ]);
@@ -59,6 +60,39 @@ class ArquivoController extends Controller
         echo json_encode($dataForm);
    
     }
+
+    public function uploadApi(Request $request){
+        if($request->get('image')){
+            $image = $request->get('image');
+            $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
+            Image::make($request->get('image'))->save(public_path('uploads02/').$name);
+
+            $dataForm['msg'] = 'Enviado!!';
+        }
+
+        return response()->json(['msg' => 'You have successfully uploaded an image'], 200);
+
+    }
+
+    public function uploadDropZone(Request $request){
+
+        $destinationPath = public_path('uploads02');
+
+        if($request->file('file'))
+        {
+           $arquivo = $request->file('file');
+           $name = time().$arquivo->getClientOriginalName();
+           $arquivo->move($destinationPath, $name);
+
+           
+        }
+ 
+ 
+        return response()->json(['success' => 'You have successfully uploaded an image'], 200);
+    }
+
+
+     
     
     public function resize($nome,$largura,$altura,$arquivo,$fileName,$destinationPath,$tipo){
 

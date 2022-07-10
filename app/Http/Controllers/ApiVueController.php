@@ -61,6 +61,7 @@ class ApiVueController extends Controller
 
     public function files(){
         
+        echo 'oi'; exit;
 
         $lista = Artigo::all();
         return $lista;

@@ -3,7 +3,7 @@
     <ul>
 
         <li><a href="{{ route('site.inicio') }}">Home</a></li>
-        <li><a href="#">Planos de consórcio</a>
+        <li><a href="#">Planos</a>
             <ul class="sub-menu">
                 @foreach ($produtos as $item)
                     <li><a href="{{ route('site.plano', $item['slug']) }}">{{ $item['nome'] }}</a></li>
@@ -17,7 +17,7 @@
                 <li><a href="{{ route('site.representantes') }}">Minas Gerais</a></li>
             </ul>        
         </li>
-        <li><a href="{{ route('site.contato') }}">Fale Conosco</a></li>
+        <li><a href="{{ route('site.contato') }}">Contato</a></li>
         <li><a href="{{ route('site.cadastro') }}" class="" >Seja nosso parceiro</a></li>
         <li class="hide"><a href="{{ route('login') }}" >Área restrita</a></li>
         

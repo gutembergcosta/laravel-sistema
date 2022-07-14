@@ -3,11 +3,10 @@
         <div class="grid-topo">
             <div class="logo flex">
                 <a href="{{ route('site.inicio') }}" class="total">
-                    <img class="total" src="{{ asset('site/imagens/logo.png') }}" alt="" srcset="">
+                    <img class="total" src="{{ asset('site/imagens/logobase.png') }}" alt="" srcset="">
                 </a>    
             </div>
             <div class="vazio01 flex">
-                <img class="total" src="{{ asset('site/imagens/admlogo.png') }}" alt="" srcset="">
             </div>
             <div class="telefone ">
                 <ul class="flex">

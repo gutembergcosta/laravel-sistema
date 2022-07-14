@@ -34,8 +34,8 @@
                 $("#img-destaque-{{ $tipo }}").uploadFile({
                     url:"{{ route('arquivo.upload') }}",
                     multiple:false,
-                    dragDrop:false,
-                    acceptFiles:".pdf,.jpeg,.png",
+                    dragDrop:true,
+                    acceptFiles:".pdf,.jpeg,.png,.jpg",
                     fileName:"myfile",
                     returnType:"json",
                     formData: {

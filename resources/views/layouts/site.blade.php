@@ -59,7 +59,7 @@
         <div class="pagina ">
             <div class="area-footer ">
                 <div class="logo flex">
-                    <img src="{{ asset('site/imagens/logo02.jpg') }}" alt="" srcset="">
+                    <img src="{{ asset('site/imagens/logo02.png') }}" alt="" srcset="">
                    
                 </div>
                 <div class="navbar">

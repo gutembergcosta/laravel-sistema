@@ -115,8 +115,7 @@ class PaginasController extends Controller
         $dadosGerais = $this->dadosGerais;
         $produtos = $this->produtos;
         $textual['texto'] = $this->dadosGerais['institucional'];
-        $textual['img'] = Arquivo::where('tipo', 'institucional')->first()['arquivo'];
-
+        $textual['img'] = Arquivo::where('tipo', 'institucional')->get()->last()->arquivo;
         
         $tituloPagina = 'Institucional';
         

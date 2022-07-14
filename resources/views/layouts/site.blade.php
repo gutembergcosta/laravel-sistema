@@ -59,7 +59,7 @@
         <div class="pagina ">
             <div class="area-footer ">
                 <div class="logo flex">
-                    <img src="{{ asset('site/imagens/logo02.png') }}" alt="" srcset="">
+                    <img src="{{ asset('site/imagens/logo02.jpg') }}" alt="" srcset="">
                    
                 </div>
                 <div class="navbar">
@@ -122,7 +122,7 @@
                 
             </div>
             <div class="assinatura total text-center">
-                <p>Consórcio Net Braisl | 2004 - <?= date("Y") ?> | Todos Direitos Reservados</p>
+                <p>Nome da Empresa | 2004 - {{date("Y")}} | Todos Direitos Reservados</p>
                 
             </div>
         </div>
@@ -205,7 +205,8 @@
             slideTransition: 'fade',
             autoplay:true,
             autoplayTimeout:6000,
-            autoplayHoverPause:true,
+            animateIn: 'fadeIn', // add this
+            animateOut: 'fadeOut' // and this
             
         });
 

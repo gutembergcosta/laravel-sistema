@@ -7,12 +7,12 @@
                 </a>    
             </div>
             <div class="vazio01 flex">
-                <img class="total hide" src="{{ asset('site/imagens/admlogo.png') }}" alt="" srcset="">
+                <img class="total" src="{{ asset('site/imagens/admlogo.png') }}" alt="" srcset="">
             </div>
             <div class="telefone ">
                 <ul class="flex">
                     <li> <i class="fas fa-phone-alt"></i> <span>{{ $dadosGerais['tel01'] }}</span> </li>
-                    <li class="hide"> <i class="fas fa-phone-alt"></i> <span>{{ $dadosGerais['tel02'] }}</span> </li>
+                    <li> <i class="fas fa-phone-alt"></i> <span>{{ $dadosGerais['tel02'] }}</span> </li>
                 </ul>
             </div>
             <div class="social-media">
@@ -41,7 +41,7 @@
                 <nav>
                     <ul>
                         <li><a href="{{ route('site.inicio') }}">Home</a></li>
-                        <li><a href="{{ route('site.planos') }}">Planos de consórcio</a>
+                        <li><a href="{{ route('site.planos') }}">Planos</a>
                             <ul>
                                 @foreach ($produtos as $item)
                                     <li><a href="{{ route('site.plano', $item['slug']) }}">{{ $item['nome'] }}</a></li>
@@ -51,11 +51,11 @@
                         <li><a href="{{ route('site.institucional') }}">Institucional</a></li>
                         <li><a href="{{ route('site.representantes') }}">Localização</a>
                         <li><a href="{{ route('site.faq') }}">Dúvidas Frequentes</a>
-                        <li><a href="{{ route('site.contato') }}">Fale Conosco</a></li>
+                        <li><a href="{{ route('site.contato') }}">Contato</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="call-cadastro flex hide">
+            <div class="call-cadastro flex ">
                 <a href="{{ route('site.cadastro') }}" class="" >
                     <i class="fas fa-laugh"></i>
                     Seja nosso parceiro

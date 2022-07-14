@@ -1,4 +1,4 @@
-<section id="produtos">
+<section id="produtos" class="bg-contraste">
     <div class="pagina">
 
         <div class="area-titular" >

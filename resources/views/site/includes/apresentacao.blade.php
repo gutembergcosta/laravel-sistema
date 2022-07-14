@@ -4,7 +4,7 @@
         <div class="area-titular" >
             <div class="titl" >
                 <h2>
-                    Bem Vindos ao Consórcio Net Brasil
+                    Bem Vindos
                 </h2>
                 
             </div>

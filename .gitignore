@@ -1,3 +1,4 @@
+site/css/estilos.css.map
 /node_modules
 /public/hot
 /public/uploads
@@ -18,5 +19,4 @@ yarn-error.log
 *.png
 *.zip
 *.rar
-_*
-site/css/estilos.css.map
+

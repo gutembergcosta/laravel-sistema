@@ -103,6 +103,7 @@
             dataType: "json",
             data: dataform,
             success: function(data) {
+
                 if(data['msg'])alert(data['msg']);
                 if(data['errors'])msgAlerta(data['errors']);
                 if(data['destino']){
@@ -153,7 +154,7 @@
             if($(this).data('item')){
                 $.ajax({
                     url: "{{ url('admin/deletar-arquivo') }}",
-                    dataType: "text",
+                    dataType: "json",
                     async:false,
                     type: "POST",
                     data: {
@@ -162,7 +163,6 @@
                     },
                     success: function (data) 
                     {
-                        console.log('data: ' +data);
                         if(data == 1){
                             excluido = 1;
                         }else{
@@ -189,12 +189,10 @@
     $(document).on('click', '.deletar',function () {	
         if (confirm("Deseja realmente deletar este item??") == true) {
             
-            let excluido = 0;
-
             if($(this).data('tipo')){
                 $.ajax({
                     url: "{{ url('admin/deletar-') }}"+ $(this).data('tipo'),
-                    dataType: "text",
+                    dataType: "json",
                     async:false,
                     type: "POST",
                     data: {
@@ -203,28 +201,18 @@
                     },
                     success: function (data) 
                     {
-                        console.log('data: ' +data);
-                        if(data == 1){
-                            alert('Item excluído com sucesso!');
+                        alert(data.msg);
 
-                            excluido = 1;
-                        }else{
-                            alert("Erro");
-                        }
+                        $(this).closest('tr').fadeOut(300); 
+                        $('#linha-'+$(this).data('tkn')).fadeOut(300); 
                         
+                        return;
                     },
                     error: function ()
                     {
                         alert("Erro");
                     }
                 });
-            }
-                
-            if(excluido == 1){
-                $(this).closest('tr').fadeOut(300); 
-                $('#linha-'+$(this).data('tkn')).fadeOut(300); 
-                
-                return;
             }
 
         }

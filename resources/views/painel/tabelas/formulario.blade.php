@@ -10,7 +10,7 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
-                                    
+
                     <div class="row">
                         <form id="formulario" class="formulario" action="{{ url($actionForm)   }}" method="post">  
 
@@ -50,7 +50,7 @@
 
 
                             <div class="col-md-3 side-area">
-                                @component('painel.blocos.upload-arquivo', $dataArquivoDestaque)
+                                @component('painel.blocos.upload-arquivo', $arquivoDestaque)
                                     <p>Arquivos permitidos: PDF ou Excel</p>
                                 @endcomponent
                             </div>

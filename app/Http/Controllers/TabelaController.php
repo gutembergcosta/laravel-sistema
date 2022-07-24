@@ -54,7 +54,7 @@ class TabelaController extends Controller
         $frmData['msg']         = 'Item salvo com sucesso';
         $frmData['destino']     = 'reload';
 
-        $request['slug'] = slug($request->nome);
+        $request['slug']        = slug($request->nome);
 
         Tabela::Create($request->all());
  

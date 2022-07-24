@@ -103,7 +103,6 @@
             dataType: "json",
             data: dataform,
             success: function(data) {
-                
                 if(data['msg'])alert(data['msg']);
                 if(data['errors'])msgAlerta(data['errors']);
                 if(data['destino']){
@@ -113,9 +112,10 @@
                         window.location.href = data['destino'];
                     }
                 }
-
-
-            }
+            },
+            error: function(data) {
+                msgAlerta(JSON.parse(data.responseText).errors)
+            },
         });
     }
 
@@ -125,12 +125,10 @@
 
     function msgAlerta(matriz){
 
-        //console.log(item.original); return;
-
         let divHtml = '';
-    
-        Object.keys(matriz.original).forEach(function (item) {
-            divHtml += blocoErroMsg(matriz.original[item][0])
+
+        Object.values(matriz).forEach(val => {
+            divHtml += blocoErroMsg(val)
         });
 
         let alertHtml = `<div class='alert alert-danger alert-dismissible'>

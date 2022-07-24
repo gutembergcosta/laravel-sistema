@@ -46,10 +46,12 @@ Route::middleware(['verificaLogin'])->prefix('admin')->group(function(){
         Route::post('/deletar-cadastro', 'CadastroController@destroy')->name('admin.deletar-cadastro');
         Route::post('/salvar-cadastro', 'CadastroController@salvar')->name('admin.salvar-cadastro');
 
-        Route::get('/tabelas', 'TabelaController@lista')->name('admin.tabelas');
+        Route::get('/tabelas', 'TabelaController@index')->name('admin.tabelas');
+        Route::get('/tabela/add', 'TabelaController@create')->name('admin.add-tabela');
+        Route::post('/salvar-tabela', 'TabelaController@store')->name('admin.salvar-tabela');
+
         Route::get('/tabela/{action}/{id?}', 'TabelaController@formulario')->name('admin.tabela-form');
         Route::post('/deletar-tabela', 'TabelaController@destroy')->name('admin.deletar-tabela');
-        Route::post('/salvar-tabela', 'TabelaController@salvar')->name('admin.salvar-tabela');
         
         Route::get('/proposta-infos/{id}', 'PropostaController@informacoes')->name('admin.proposta-infos');
         Route::get('/imprimir-contrato/{id}', 'PropostaController@imprimir')->name('admin.imprimir-proposta');

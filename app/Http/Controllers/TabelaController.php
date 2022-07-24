@@ -3,110 +3,76 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Tabela;
-use App\Arquivo;
-use Validator;
-use App\Http\Controllers\ArquivoController;
 use Illuminate\Support\Facades\Auth;
-
-
-
-
+use App\Tabela;
+use Validator;
+use App\Http\Requests\StoreTabelaRequest;
 
 class TabelaController extends Controller
 {
-
-    public function lista(){
-
+   
+    public function index()
+    {
         $tipoUser = (Auth::user()->userDados->tipo == 'admin') ? 'admin' : 'user';
-        $data = $this->data;
-
         $lista = Tabela::all();
-
-        return view('painel.tabelas.lista-'.$tipoUser, compact('data','lista'));
+        return view('painel.tabelas.lista-'.$tipoUser, compact('lista'));
     }
 
-    public function formulario($action, $id = ''){
+    public function show($id)
+    {
+        //
+    }
 
+ 
+    public function edit($id)
+    {
+        //
+    }
+
+    
+    public function create()
+    {
         $ref = uniqid();
         $actionForm = 'admin/salvar-tabela';
         $item = [];
         $galeria = FALSE;
         $img = '';
-
-        if($action == 'edit'){
-            
-            $item   = Tabela::find($id);
-            $ref    = $item->ref;
-
-            $img = $item->arquivos->where('tipo', 'tabela')->last();
-
-        }
+        $action = 'add';
 
         $dataArquivoDestaque = ['ref' => $ref, 'img' => $img, 'tipo' => 'tabela','titulo' => 'Tabela'];
 
         $compact = compact('ref', 'item','action','dataArquivoDestaque','actionForm');
-
      
         return view('painel.tabelas.formulario', $compact);
     }
 
-    public function salvar(Request $request){
+    
+    public function store(StoreTabelaRequest $request)
+    {
+        $frmData = [];
 
-        $validator = Validator::make($request->all(), [
-            
-            'nome'      => 'required',
-        ]);
+        $frmData['msg']         = 'Item salvo com sucesso';
+        $frmData['destino']     = 'reload';
 
-        if($validator->fails()){
-            $frmData['errors'] = response()->json($validator->errors(), 200);
-        }
+        $request['slug'] = slug($request->nome);
 
-        if ($validator->passes()) {
-
-            $frmData['msg']         = 'Item salvo com sucesso';
-            $frmData['destino']     = 'reload';
-
-
-            $request['slug'] = slug($request->nome);
-
-            
-
-            $x = Tabela::updateOrCreate(['id' => $request->id],$request->all())->id;
-
-        }
+        Tabela::Create($request->all());
  
         echo json_encode($frmData);
-          
     }
 
-    public function pagina($slug = ''){
 
-
-        $destino = ($slug) ? 'site.artigo' : 'site.artigos';
     
-        return view($destino);
-    
-    }
 
-    public function destroy(Request $request)
+    
+    public function update(Request $request, $id)
     {
-        $status = 1;
+        dd('update');
+    }
 
-
-        $arquivo = new ArquivoController;
-        
-        $item       = Tabela::find($request->id);
-        $ref        = $item->ref;
-        $imagens    = Arquivo::where('ref', $ref)->pluck('arquivo');
-
-        foreach($imagens as $img){
-            $arquivo->excluir($img);
-        }
-
-        $item->delete();
-
-        echo json_encode($status);
-
+    
+    public function destroy($id)
+    {
+        dd('destroy');
     }
 }

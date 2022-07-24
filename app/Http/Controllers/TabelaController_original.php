@@ -104,6 +104,8 @@ class TabelaController extends Controller
             $arquivo->excluir($img);
         }
 
+
+
         $item->delete();
 
         echo json_encode($status);

@@ -32,8 +32,7 @@ class TabelaController extends Controller
     public function lista()
     {
         $data = $this->listTabela->list();
-        $lista = $data['lista'];
-        return view("painel.tabelas.lista-{$data['tipoUser']}", compact('lista'));
+        return view("painel.tabelas.lista-{$data['tipoUser']}", ['lista' => $data['lista']]);
     }
     
     public function formulario($action, $id = null)
@@ -41,7 +40,6 @@ class TabelaController extends Controller
         $data = $this->dataFormTabela->getData($action, $id);
         return view('painel.tabelas.formulario', $data);
     }
-
     
     public function salvar(TabelaRequest $request)
     {

@@ -7,10 +7,8 @@ use File;
  
 class DestroyFile
 {
-    
     public function destroy($item)
     {
-        dd('aki');
         $prefixos = ['mini','max','square','thumb','original'];
         foreach($prefixos as $prefixo){
             $urlFile = 'uploads/'.$prefixo.'-'.$item; 

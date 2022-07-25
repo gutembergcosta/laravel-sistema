@@ -21,7 +21,7 @@ class DestroyTabela
  
         $item       = Tabela::find($id);
         $this->excluirArquivo->destroyGaleria($item->ref);
-        $item->delete();
+        //$item->delete();
 
         return $data;
         
